@@ -1,0 +1,236 @@
+/* === Reset & Basics === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #e3def2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo-img {
+  height: 40px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #000;
+  margin: 4px 0;
+}
+
+/* === Search Input === */
+.search-box {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* === Table === */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: #fff;
+}
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+.projects-table thead {
+  background-color: #6c63ff;
+  color: #fff;
+}
+.projects-table th,
+.projects-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.projects-table th {
+  position: sticky;
+  top: 0;
+  background: #6c63ff;
+  z-index: 2;
+}
+.projects-table tbody tr:hover {
+  background-color: #f1f1ff;
+}
+
+/* === Scroll to Top === */
+#scrollToTop {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+#scrollToTop:hover {
+  background-color: #4b45d3;
+  transform: scale(1.1);
+}
+
+/* === WhatsApp Floating Button === */
+#whatsappButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#whatsappButton:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
+
+
+/* === Footer === */
+.site-footer {
+  background-color: #01579b;
+  color: white;
+  padding: 40px 20px 10px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-column {
+  flex: 1 1 200px;
+}
+.footer-column h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column ul li a {
+  color: #b3e5fc;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.footer-column p {
+  padding: 10px 0;
+}
+.social-icons a {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #e3def2;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .navbar.open .nav-links {
+    max-height: 300px;
+    padding: 10px 0;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Rholuck</title>
+
+  <link rel="stylesheet" href="contact.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="logo"><img src="./img/cropped-rholuck-logo162.png" alt="Logo" class="logo-img" /></a>
+  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="./index.html">HOME</a>
+    <a href="./about.html">ABOUT US</a>
+    <a href="./service.html">SERVICES</a>
+    <a href="./project.html">PROJECTS</a>
+    <a href="./training.html">TRAINING</a>
+    <a href="./contact.html" class="active">CONTACT US</a>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+
+      <div class="info-block">
+        <h4>Email</h4>
+        <p>info@rholuckng.com<br>rholuck_rsn@yahoo.com<br>rholuckservices@gmail.com</p>
+      </div>
+
+      <div class="info-block">
+        <h4>Phone</h4>
+        <p>+234-802-842-7429<br>+234-706-228-8830<br>+234-806-404-6790</p>
+      </div>
+
+      <div class="info-block">
+        <h4>Location</h4>
+        <p>
+          Rholuck Services Nigeria Ltd<br>
+          7 Unity Close, Unity Estate, Off Segun Kujoore Street,<br>
+          Off CMD Road by GTB, Magodo Shangisha, Lagos State, Nigeria
+        </p>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your E-mail" required />
+      <input type="text" name="phone" placeholder="Your Phone" />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Scroll & WhatsApp Buttons -->
+<button id="scrollToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<a href="https://wa.me/2348025301902" target="_blank" id="whatsappButton" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <h2>Rholuck Services</h2>
+      <p>Your one-stop solution for HSE, environmental consultancy, and training in Nigeria.</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/RholuckNG"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/rholuckng"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/rholuck-services-nigeria-limited/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./training.html">Training</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Environmental Audit</a></li>
+        <li><a href="#">Impact Assessment</a></li>
+        <li><a href="#">Training Programs</a></li>
+        <li><a href="#">Safety Consulting</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Address:</strong><br>
+        7 Unity Close, Unity Estate,<br>
+        Off CMD Road, Magodo Shangisha,<br>
+        Lagos State, Nigeria</p>
+      <p><strong>Email:</strong><br>
+        info@rholuckng.com<br>
+        rholuck_rsn@yahoo.com<br>
+        rholuckservices@gmail.com</p>
+      <p><strong>Phone:</strong><br>
+        +234-802-842-7429<br>
+        +234-706-228-8830<br>
+        +234-806-404-6790</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Rholuck Services Nigeria Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementById('navLinks');
+  const scrollBtn = document.getElementById('scrollToTop');
+
+  if (menuToggle && navbar) {
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('open');
+      });
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

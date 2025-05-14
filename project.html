@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Environmental Projects</title>
+  <link rel="stylesheet" href="project.css" />
+  <!-- <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.full.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="logo"><img src="./img/cropped-rholuck-logo162.png" alt="Logo" class="logo-img" /></a>
+  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="./Index.html">HOME</a>
+    <a href="./about.html">ABOUT US</a>
+    <a href="./service.html">SERVICES</a>
+    <a href="./project.html" class="active">PROJECTS</a>
+    <a href="./training.html">TRAINING</a>
+    <a href="./contact.html">CONTACT US</a>
+  </div>
+</nav>
+
+<main>
+  <section id="projects" class="project-section">
+    <div class="container">
+      <h2 class="section-title">List of Selected Environmental Projects</h2>
+
+      <!-- 🔍 Search Field -->
+      <input type="text" id="searchInput" placeholder="🔍 Search projects..." class="search-box" onkeyup="filterTable()" />
+
+      <!-- 📊 Table -->
+      <div class="table-wrapper" role="region" aria-labelledby="table-title" tabindex="0">
+        <table class="projects-table" role="table">
+          <caption id="table-title" class="visually-hidden">Environmental Projects List Table</caption>
+          <thead>
+            <tr>
+              <th scope="col">S/N</th>
+              <th scope="col">Client</th>
+              <th scope="col">Project Description</th>
+              <th scope="col">Year</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>De United Foods Industries Ltd (Indomie)</td><td>Environmental Audit report</td><td>2009</td><td>Completed</td></tr>
+                <tr><td>2</td><td>May & Baker Nigeria Plc</td><td>Environmental Impact Assessment on Pharma Plant</td><td>2010</td><td>Completed</td></tr>
+                <tr><td>3</td><td>May & Baker Nigeria Plc</td><td>Environmental Impact Assessment on Food Plant</td><td>2010</td><td>Completed</td></tr>
+                <tr><td>4</td><td>De United Foods Industries Ltd (Indomie)</td><td>Environmental Audit report</td><td>2011</td><td>Completed</td></tr>
+                <tr><td>5</td><td>De United Foods Industries Ltd (Indomie)</td><td>Air Quality Monitoring</td><td>2011</td><td>Completed</td></tr>
+                <tr><td>6</td><td>Evans Medicals Plc</td><td>Environmental Audit report</td><td>2011</td><td>Completed</td></tr>
+                <tr><td>7</td><td>Nigerian German Chemicals Plc</td><td>Environmental Audit report</td><td>2012</td><td>Completed</td></tr>
+                <tr><td>8</td><td>Airtel Networks Limited</td><td>Environmental Impact Assessment on telecom cell sites</td><td>2012</td><td>Completed</td></tr>
+                <tr><td>9</td><td>Beckers Industrial Coating Ltd</td><td>Environmental Impact Assessment</td><td>2012</td><td>Completed</td></tr>
+                <tr><td>10</td><td>Voyants Solutions PVT (India)</td><td>Environmental Impact Assessment on dualization of Ilorin-Mokwa-Kaduna Road</td><td>2012</td><td>Completed</td></tr>
+                <tr><td>11</td><td>May & Baker Nigeria Plc</td><td>Environmental Audit Report for Pharma Plant</td><td>2013</td><td>Completed</td></tr>
+                <tr><td>12</td><td>May & Baker Nigeria Plc</td><td>Environmental Audit Report for Food Plant</td><td>2013</td><td>Completed</td></tr>
+                <tr><td>13</td><td>Evans Medicals Plc</td><td>Environmental Audit report</td><td>2013</td><td>Completed</td></tr>
+                <tr><td>14</td><td>Egbin Power Plc</td><td>Environmental Audit report</td><td>2015</td><td>Completed</td></tr>
+                <tr><td>15</td><td>Nigerian German Chemicals Plc</td><td>Environmental Monitoring</td><td>2015</td><td>Completed</td></tr>
+                <tr><td>16</td><td>Masters Energy Oil & Gas Ltd</td><td>Environmental Audit report</td><td>2016</td><td>Completed</td></tr>
+                <tr><td>17</td><td>Amicable Oil & Gas Ltd</td><td>Environmental Audit report</td><td>2016</td><td>Completed</td></tr>
+                <tr><td>18</td><td>Wangkang Glass & Ceramics Coy Ltd</td><td>Environmental Impact Assessment</td><td>2016</td><td>Completed</td></tr>
+                <tr><td>19</td><td>Goodwill Ceramics Coy Ltd</td><td>Environmental Audit report</td><td>2016</td><td>Completed</td></tr>
+                <tr><td>20</td><td>Pacific Energy Coy Ltd</td><td>Environmental Audit report</td><td>2016</td><td>Completed</td></tr>
+                <tr><td>21</td><td>Pacific Energy Coy Ltd</td><td>Environmental Monitoring</td><td>2016 till date</td><td>Running Contract</td></tr>
+                <tr><td>22</td><td>Pacific Energy Coy Ltd</td><td>Health & Safety Audit</td><td>2016</td><td>Running Contract</td></tr>
+                <tr><td>23</td><td>Egbin Power Plc</td><td>Environmental Audit report</td><td>2017</td><td>Completed</td></tr>
+                <tr><td>24</td><td>Egbin Power Plc</td><td>Environmental Monitoring</td><td>2017 till date</td><td>Running contract</td></tr>
+                <tr><td>25</td><td>Falcon Corporation Limited</td><td>Environmental Audit report for CGS</td><td>2017</td><td>Completed</td></tr>
+                <tr><td>26</td><td>Falcon Corporation Limited</td><td>Environmental Audit report for gas Plant</td><td>2017</td><td>Completed</td></tr>
+                <tr><td>27</td><td>Pacific Energy Coy Ltd</td><td>Environmental Monitoring</td><td>2017</td><td>Running Contract</td></tr>
+                <tr><td>28</td><td>Berger Paints Nigeria Plc</td><td>Environmental Audit Report</td><td>2017</td><td>Completed</td></tr>
+                <tr><td>29</td><td>Berger Paints Nigeria Plc</td><td>Upgrade of Effluent Treatment Plant</td><td>2018</td><td>Completed</td></tr>
+                <tr><td>30</td><td>Hurlag Technologies Ltd</td><td>Conduct of environmental studies</td><td>2019 till date</td><td>Running contract</td></tr>
+                <tr><td>31</td><td>Mainstream Energy Solutions Ltd - Kainji Hydro Power Plant</td><td>Conduct of monthly environmental monitoring</td><td>2020 till date</td><td>Running contract</td></tr>
+                <tr><td>32</td><td>Mainstream Energy Solutions Ltd - Jebba Hydro Power Plant</td><td>Environmental monitoring</td><td>2020 till date</td><td>Running contract</td></tr>
+                <tr><td>33</td><td>Mainstream Energy Solutions Ltd - Kainji Hydro Power Plant</td><td>Environmental monitoring</td><td>2020 till date</td><td>Running contract</td></tr>
+                <tr><td>34</td><td>Cybernetics International Services Ltd (Oil & Gas)</td><td>Environmental Evaluation Studies (EES) on existing Pet. Depot, Oghara, Delta State</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>35</td><td>Cybernetics International Services Ltd (Oil & Gas)</td><td>Conduct of EIA on proposed expansion on existing petroleum Depot, Oghara, Delta State</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>36</td><td>Cybernetics International Services Ltd (Oil & Gas)</td><td>Preparation of Safety Case on existing petroleum depot</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>37</td><td>Cassadel Cassava Starch Coy Ltd</td><td>EIA on the proposed Cassava Starch Manufacturing Plant, Delta</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>38</td><td>Freetown Waste Mgt. Recycle Ltd</td><td>EIA on the proposed scraped Tyre recycling plant, Ibadan</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>39</td><td>Decagon-Ed Tech Park SPV Limited</td><td>EIA on the proposed Edo Tech Park project, Edo State</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>40</td><td>United Bank for Africa Plc</td><td>Environmental Audit report</td><td>2021</td><td>Completed</td></tr>
+                <tr><td>41</td><td>Optimera Energy FZE</td><td>Environmental Impact Assessment</td><td>2022</td><td>Completed</td></tr>
+                <tr><td>42</td><td>Falcon Corporation Limited</td><td>Environmental Compliance Monitoring (ECM)</td><td>2023</td><td>Ongoing contract</td></tr>
+                <tr><td>43</td><td>Optimera Energy FZE</td><td>Impact Mitigation Monitoring</td><td>2023</td><td>Ongoing contract</td></tr>
+                <tr><td>44</td><td>First Bank Nigeria Limited</td><td>Environmental Audit report</td><td>2022</td><td>Completed</td></tr>
+                <tr><td>45</td><td>Zenith Bank International Plc</td><td>Environmental Audit Report</td><td>2022</td><td>Completed</td></tr>
+                <tr><td>46</td><td>Taeillo Furniture Limited</td><td>Environmental Audit Report</td><td>2023</td><td>Completed</td></tr>
+                <tr><td>47</td><td>Falcon Corporation Limited</td><td>Environmental Audit report</td><td>2023</td><td>Completed</td></tr>
+                <tr><td>48</td><td>Upstream Industrial & Medical gas Ltd</td><td>Environmental & Social Impact Assessment (ESIA)</td><td>2023</td><td>Ongoing</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+ <button id="scrollToTop" title="Back to top" aria-label="Scroll to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/2348025301902" target="_blank" id="whatsappButton" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <h2>Rholuck Services</h2>
+      <p>Your one-stop solution for HSE, environmental consultancy, and training in Nigeria.</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/RholuckNG"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/rholuckng"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/rholuck-services-nigeria-limited/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./training.html">Training</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Environmental Audit</a></li>
+        <li><a href="#">Impact Assessment</a></li>
+        <li><a href="#">Training Programs</a></li>
+        <li><a href="#">Safety Consulting</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Address:</strong><br>
+        7 Unity Close, Unity Estate,<br>
+        Off CMD Road, Magodo Shangisha,<br>
+        Lagos State, Nigeria</p>
+      <p><strong>Email:</strong><br>
+        info@rholuckng.com<br>
+        rholuck_rsn@yahoo.com<br>
+        rholuckservices@gmail.com</p>
+      <p><strong>Phone:</strong><br>
+        +234-802-842-7429<br>
+        +234-706-228-8830<br>
+        +234-806-404-6790</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Rholuck Services Nigeria Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+  // Search
+  function filterTable() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const rows = document.querySelectorAll(".projects-table tbody tr");
+
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+
+  // Sort
+  document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll(".projects-table thead th");
+    headers.forEach((th, index) => {
+      let asc = true;
+      th.style.cursor = "pointer";
+      th.addEventListener("click", () => {
+        const rows = Array.from(document.querySelectorAll(".projects-table tbody tr"))
+          .filter(row => row.style.display !== "none");
+        rows.sort((a, b) => {
+          const aText = a.children[index].textContent.trim();
+          const bText = b.children[index].textContent.trim();
+          return asc
+            ? aText.localeCompare(bText, undefined, { numeric: true })
+            : bText.localeCompare(aText, undefined, { numeric: true });
+        });
+        asc = !asc;
+        const tbody = document.querySelector(".projects-table tbody");
+        rows.forEach(row => tbody.appendChild(row));
+      });
+    });
+  });
+
+    // Navbar toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navbar = document.getElementById('navbar');
+  const navLinks = document.getElementById('navLinks');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('open');
+      });
+    });
+ const scrollBtn = document.getElementById('scrollToTop');
+window.addEventListener('scroll', () => {
+  scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+    
+  }
+
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

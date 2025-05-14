@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rholuck Training</title>
+  <link rel="stylesheet" href="training.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- === Navbar === -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="logo"><img src="./img/cropped-rholuck-logo162.png" alt="Logo" class="logo-img" /></a>
+  <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="./Index.html">HOME</a>
+    <a href="./about.html">ABOUT US</a>
+    <a href="./service.html">SERVICES</a>
+    <a href="./project.html">PROJECTS</a>
+    <a href="./training.html" class="active">TRAINING</a>
+    <a href="./contact.html">CONTACT US</a>
+  </div>
+</nav>
+
+<!-- === Hero Section === -->
+<section class="hero-banner" role="banner">
+  <div class="overlay">
+    <img src="./img/1-services.jpg" alt="Training Banner" class="hero-image" loading="lazy" />
+    <h1>Our Training</h1>
+    <p>Rholuck organizes national workshops, external and in-plant training for companies and government establishments in a serene learning environment.</p>
+    <a href="https://rholuckng.com/wp-content/uploads/2024/01/2024-Training-calendar.pdf" class="download-btn" target="_blank" rel="noopener">
+      <i class="fas fa-download"></i> Download Profile
+    </a>
+    <a href="./contact.html" class="btn-request">📬 Request Custom Training</a>
+  </div>
+</section>
+
+<!-- === Intro Section === -->
+<section class="training-intro container">
+  <p>Our facilitators have completed ITF & CMD "Train-the-Trainer" certifications. Rholuck Services Nigeria Ltd is officially registered as a professional training organization.</p>
+</section>
+
+<!-- === Certifications Section === -->
+<section class="training-intro container" id="certifications">
+  <h2>Environmental Certifications / Accreditations</h2>
+  <p>We are proudly accredited by regulatory bodies including:</p>
+  <ul>
+    <li>Federal Ministry of Environment (FMEnv), Abuja</li>
+    <li>National Environmental Standards & Regulations Enforcement Agency (NESREA)</li>
+    <li>National Oil Spill Detection and Response Agency (NOSDRA)</li>
+    <li>Nigerian Petroleum Exchange (NIPEX)</li>
+    <li>Centre for Management Development (CMD)</li>
+    <li>Industrial Training Fund (ITF)</li>
+    <li>And numerous State Environmental Agencies across Nigeria</li>
+  </ul>
+</section>
+
+<!-- === Scroll Buttons === -->
+<button id="scrollToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<a href="https://wa.me/2348025301902" target="_blank" id="whatsappButton" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- === Footer === -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <h2>Rholuck Services</h2>
+      <p>Your one-stop solution for HSE, environmental consultancy, and training in Nigeria.</p>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/RholuckNG"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/rholuckng"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/rholuck-services-nigeria-limited/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="./Index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./service.html">Services</a></li>
+        <li><a href="./training.html">Training</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Environmental Audit</a></li>
+        <li><a href="#">Impact Assessment</a></li>
+        <li><a href="#">Training Programs</a></li>
+        <li><a href="#">Safety Consulting</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p><strong>Address:</strong><br>7 Unity Close, Unity Estate,<br>Off CMD Road, Magodo Shangisha,<br>Lagos State, Nigeria</p>
+      <p><strong>Email:</strong><br>info@rholuckng.com</p>
+      <p><strong>Phone:</strong><br>+234-802-842-7429</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Rholuck Services Nigeria Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- === Script === -->
+<script>
+  const navbar = document.getElementById('navbar');
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const scrollBtn = document.getElementById('scrollToTop');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

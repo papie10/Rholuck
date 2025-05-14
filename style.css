@@ -1,0 +1,563 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #e3def2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  padding: 14px 10px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #6c63ff;
+  border-bottom: 2px solid #6c63ff;
+}
+
+/* === Hamburger Toggle === */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.menu-toggle span {
+  background: black;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  transition: 0.3s;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 10px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+
+.navbar.open .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.navbar.open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.navbar.open .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+  max-width: 80%;
+}
+
+.hero-caption h1 {
+  font-size: clamp(24px, 5vw, 48px);
+  margin-bottom: 12px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-caption p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  animation: fadeInUp 1s ease-out 0.5s;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === About Section === */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.about-img {
+  flex: 1;
+  text-align: center;
+}
+
+.about-img img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === Services Section === */
+#services {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: left;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+  border-radius: 50px;
+}
+
+.service-item:nth-child(odd) {
+  background: #ffffff;
+}
+.service-item:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.service-item p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.service-btn {
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.service-btn:hover {
+  background-color: #004d99;
+}
+
+.service-item img {
+  flex: 1;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* === Training Jumbotron === */
+.training-jumbotron {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.training-overlay h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.training-overlay p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.training-btn {
+  padding: 14px 32px;
+  background: white;
+  color: #333;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.training-btn:hover {
+  background: #333;
+  color: white;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  display: none;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background-color: #4b45d3;
+  transform: scale(1.1);
+}
+
+#scrollToTop i {
+  font-size: 20px;
+}
+
+
+#whatsappButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#whatsappButton:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+#whatsappButton i {
+  display: block;
+  font-size: 24px;
+}
+
+
+/* === Footer === */
+.site-footer {
+  background-color: #01579b;
+  color: white;
+  padding: 40px 20px 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column p{
+    padding: 10px;
+  }
+
+.footer-column h4,
+.footer-column h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #b3e5fc;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  font-size: 0.85rem;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #e3def2;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .navbar.open .nav-links {
+    max-height: 400px;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-caption h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-caption p {
+    font-size: 0.9rem;
+  }
+
+  .about-content,
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p,
+  .service-item p {
+    font-size: 1rem;
+  }
+
+  .service-item img {
+    width: 100%;
+  }
+
+  .training-jumbotron {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .training-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .training-overlay p {
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 0 15px;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-column p{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-caption h1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-caption p {
+    font-size: 0.75rem;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+    margin: 0 8px;
+  }
+
+  .training-overlay h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* === Tablet Styles === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+
+  .hero {
+    height: 75vh;
+  }
+
+  .hero-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-caption p {
+    font-size: 1.1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .service-item img {
+    max-width: 90%;
+  }
+
+  .training-jumbotron {
+    padding: 80px 30px;
+  }
+
+  .training-overlay h2 {
+    font-size: 2.4rem;
+  }
+
+  .training-overlay p {
+    font-size: 1.1rem;
+  }
+}
